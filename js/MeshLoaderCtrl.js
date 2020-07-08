@@ -69,6 +69,15 @@ function LoadAssets(scene, assetsManager) {
         console.log(message, exception);
     }
 
+    LogosLoaderTask = assetsManager.addMeshTask("", "", "./assets/stand_logos_leo.glb")
+    LogosLoaderTask.onSuccess = function (task) {
+        task.loadedMeshes[0].scaling = new BABYLON.Vector3(0.003, 0.003, 0.003)
+    }
+
+    LogosLoaderTask.onError = function (task, message, exception) {
+        console.log(message, exception);
+    }
+
 
     HS_P = new BABYLON.TransformNode("HS_P");
     HSIconTask = assetsManager.addMeshTask("", "", "./assets/HS_Icon.glb")
@@ -96,19 +105,6 @@ function LoadAssets(scene, assetsManager) {
     var pbr
     assetsManager.onFinish = function (task) {
         SetScene();
-
-                /*
-        AddShadows()
-
-        sphere = BABYLON.MeshBuilder.CreateSphere("sphere", { diameter: 0.15 }, scene);
-        sphere.position = new BABYLON.Vector3(0.005,2.29,0)
-        sphere.scaling = new BABYLON.Vector3(0.3, 0.3, 0.3)
-        pbr = new BABYLON.PBRMetallicRoughnessMaterial("pbr", scene);
-        sphere.material = pbr;
-        sphere.isVisible = true
-        pbr.baseColor = new BABYLON.Color3(1.0, 1, 1);
-        pbr.emissiveColor = new BABYLON.Color3(1.0, 1, 1);
-        */
 
 
     }

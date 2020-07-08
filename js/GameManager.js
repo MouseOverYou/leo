@@ -37,8 +37,8 @@ function openInfoUI(selec){
             lastSelected = document.getElementById("project-ssi-schaefer")
             break;
         case "3":
-            document.getElementById("project-ssi-schaefer").style.display = "block";
-            lastSelected = document.getElementById("project-ssi-schaefer");
+            document.getElementById("project-varycon").style.display = "block";
+            lastSelected = document.getElementById("project-varycon")
             break;
         case "4":
             document.getElementById("project-varycon").style.display = "block";

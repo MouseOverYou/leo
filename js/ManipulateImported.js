@@ -58,7 +58,7 @@ function SpawnHotspots(){
             //create Colliders
             elem.visibility = false;
             ArrowsHolder.push(elem.parent)
-            //FeedWithLogo(elem.name.split("_")[1], elem)
+            FeedWithLogo(elem.name.split("_")[1], elem)
             
             arrowColl = new BABYLON.MeshBuilder.CreateBox("Arrow Collider " + arrowCounter, { height: 80, width: 80, depth: 10 }, scene)
             arrowColl.material = colMat
@@ -150,7 +150,7 @@ function FeedWithLogo(name, parent){
     function PositionLogo(num) {
         var logoMesh = LogosLoaderTask.loadedMeshes[0].getChildMeshes()[0]
         logoMesh.parent = parent.parent.parent
-        logoMesh.position = new BABYLON.Vector3(parent.parent.position.x, parent.parent.position.y + 55, parent.parent.position.z)
+        logoMesh.position = new BABYLON.Vector3(parent.parent.position.x, parent.parent.position.y + 75, parent.parent.position.z)
         //holder for start animation
         LogosHolder.push(logoMesh);
     }

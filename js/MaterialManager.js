@@ -34,6 +34,9 @@ function ChangeMaterialProperties() {
     scene.getMaterialByName("iconMatRed").metallic = 1
     scene.getMaterialByName("iconMatRed").roughness = 1
 
+    scene.getMaterialByName("stationNamesMat").metallic = 0.4
+    scene.getMaterialByName("stationNamesMat").roughness = 0.15
+
     arrowGlowTex = new BABYLON.Texture("./assets/arrow_glow.jpg", scene, true, false)
     arrowGlowTex.wrapU = 1
     arrowGlowTex.uOffset = 0.0

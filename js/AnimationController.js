@@ -117,8 +117,8 @@ function BufferStartAnimation(){
         ArrowsHolder[i].rotationQuaternion = null // should allow to animate "rotation"
         startTween.from(ArrowsHolder[i].scaling, {y:0, duration:2, ease: "elastic"}, offsetLogos);
         startTween.from(ArrowsHolder[i].rotation, {y:  -180 * (Math.PI / 180), duration: 2, ease: "elastic"},"<" );
-        //startTween.from(LogosHolder[i].scaling, {y:0, duration:2, ease: "elastic"}, "<0.1")
-        //startTween.from(LogosHolder[i].position, {y:  LogosHolder[i].position.y-50, duration: 0.5, ease: "back"},"<" );
+        startTween.from(LogosHolder[i].scaling, {y:0, duration:2, ease: "elastic"}, "<0.1")
+        startTween.from(LogosHolder[i].position, {y:  LogosHolder[i].position.y-50, duration: 0.5, ease: "back"},"<" );
 ;
     offsetLogos += 0.1
     }
